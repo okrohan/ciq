@@ -20,7 +20,7 @@ const filterUsers = (filterConfig: IUserFilterConfig[]) => {
                         return filterValueNum !== undefined ? (acc && valueNum > filterValueNum) :  acc
 
                 case IFilterRule.lt:
-                    return filterValueNum !== undefined ? (acc && valueNum > filterValueNum) :  acc
+                    return filterValueNum !== undefined ? (acc && valueNum < filterValueNum) :  acc
                 default:
                     return acc
             }
